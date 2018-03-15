@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <!-- LINK TO FIREBASE GOES HERE -->
+       <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/main.css">
+ 
+        <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+   <!-- Link to Moment.js should go here -->
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <br>
+    
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+          <h1 class="text-center">Anytime is Train Time</h1>
+        </div>
+        <div class="row">
+    
+          <!-- Sign-Up Panel-->
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Lets go!</h3>
+              </div>
+              <div class="panel-body">
+    
+                <!-- Sign-up Form (note the various input "types")-->
+                <form role="form">
+                  <div class="form-group">
+                    <label for="name-input">Train Name:</label>
+                    <input class="form-control" id="name-input" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="dest-input">Destination:</label>
+                    <input class="form-control" id="dest-input" type="test">
+                  </div>
+                  <div class="form-group">
+                    <label for="first-input">First Train TIme (HH:mm):</label>
+                    <!-- <input class="form-control" id="first-input" type="number"> -->
+                    <input class="form-control" id="first-input"  type="time">
+                  </div>
+                  <div class="form-group">
+                        <label for="freq-input">Frequency(min):</label>
+                        <input class="form-control" id="freq-input" placeholder="mm"maxlength="2" type="number">
+                      </div>
+                  <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Most Recent Member Panel -->
+        <!-- <div class="row"></div> -->
+          <div class="col-lg-6">
+              
+                <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Train Name:</th>
+                            <th scope="col">Destination:</th>
+                            <th scope="col">First Train</th>
+                            <th scope="col">Frequency</th>
+                          </tr>
+                        </thead>
+                        <tbody class="some">
+                        </tbody>
+                      </table>
+            <!-- <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Current Train Schedule</h3>
+              </div>
+              <div class="panel-body" id="recent-member">
+                <h2 id="name-display"></h2>
+                <h4 id="dest-display"></h4>
+                <h4 id="first-display"></h4>
+                <h4 id="freq-display" ></h4>
+              </div>
+            </div> -->
+          </div>
+    
+        </div>
+    
+      </div>
+                          
+
+
+
+         <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/code.js"> </script>
+
+ 
+<script></script>
+</body>
+</html>
