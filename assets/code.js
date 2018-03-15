@@ -43,6 +43,25 @@ $("#add-train").on("click", function(event) {
       });
 });
   db.ref().on("child_added", function(childSnapshot) {
+    var firstTimeConverted = moment(childSnapshot.val().trainTime, "HH:mm").subtract(1, "years");
+    console.log(firstTimeConverted)
+    //console.log(firstTimeConverted);
+    //Current Time
+    var currentTime = moment();
+    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
+    // Time apart (remainder)
+    var tRemainder = diffTime % childSnapshot.val().trainFrq;
+    console.log(tRemainder);
+    // Minute Until Train
+    var tMinutesTillTrain = childSnapshot.val().trainFrq - tRemainder;
+    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+    // Next Train
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+ 
       var newRow = $("<tr>")
       newRow.attr("class", "#name-display");
       newRow.append("<td> " + childSnapshot.val().trainName +"</td>")
